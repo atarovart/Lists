@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation</title>
+</head>
+<body>
+<ul class="nav"> <!-- main marked list -->
+  <li class="nav-item"> <!-- main item -->
+    <a class="nav-link" href="#">About us</a> <!-- main item link -->
+  </li>
+  <li class="nav-item"> <!-- main item 2-->
+    <a class="nav-link" href="#">Catalogue</a>
+    
+    <ul class="subnav"> <!-- submain marked list -->
+      <li class="subnav-item"> <!-- submain item -->
+        <a class="subnav-link" href="#">Accessories</a> <!-- submain item link-->
+      </li>
+      <li class="subnav-item">
+        <a class="subnav-link" href="#">Clothes</a>
+      </li>
+      <li class="subnav-item">
+        <a class="subnav-link" href="#">Choes</a>
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Personal cabinet</a>
+  </li>
+</ul>
+<style> 
+body {
+  font-family: Franklin Gothic Medium;
+  font-size: 24px;
+  color: rgb(0, 0, 0);
+  
+}
+a {
+  text-decoration: none;
+  color:rgb(0, 0, 0);
+}
+a:hover {
+  color: white;
+  background-color: black;
+}
+
+.nav {
+  display: flex; /*make it horizontal*/
+  list-style: none; /*delete pointers*/
+}
+.nav-item {
+  position: relative;
+}
+.nav-item:hover > .subnav { /*falling subnavigation from main nav*/
+  display:list-item;
+}
+.nav-link {
+  padding: 8px 16px;
+
+  border: 1px solid rgb(143, 129, 102);
+  background-color: rgb(165, 153, 128);
+
+  color: #fff;
+  text-decoration: none;
+}
+.nav-link:hover {
+  background-color: rgb(105, 93, 68);
+}
+
+.subnav {
+  display: none;
+  min-width: 100%;
+  margin: 8px 0px;
+  padding: 0;
+  list-style: none;
+  
+  font-size: 14px;
+  
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+}
+.subnav-link {
+  display: block;
+  padding: 8px 16px;
+  
+  background-color: rgb(165, 153, 128);
+  
+  color: #fff;
+  text-decoration: none;
+}
+.subnav-link:hover {
+  background-color: rgb(105, 93, 68);
+}
+
+</style>
+</body>
+</html>
